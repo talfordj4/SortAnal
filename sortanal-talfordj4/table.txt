@@ -1,0 +1,39 @@
+Size    Random     Ascending   Descending 
+1000    242806     999        499500
+2000    1013702    1999       1999000
+3000    2182181    2999       4498500
+4000    3987659    3999       7998000
+5000    6216724    4999       12497500
+6000    9080819    5999       17997000
+7000    12187096   6999       24496500
+8000    15852857   7999       31996000
+9000    20428782   8999       40495500
+10000   24969279   9999       49995000
+11000   30347417   10999      6049450
+12000   35806471   11999      71994000
+13000   42325102   12999      84493500
+14000   48726302   13999      97993000
+15000   56402151   14999      112492500
+16000   63760456   15999      127992000
+17000   72491417   16999      144491500
+18000   80306948   17999      161991000
+19000   90086751   18999      180490500
+20000   99867275   19999      199990000
+
+Analysis of Sorting Algorithm
+
+Hypothesis:
+The average-case time complexity of the sorting algorithm is O(n^2). This is based on the patterns observed in the data.
+
+- Random Arrays: As the size of the arrays increases, the number of key comparisons increases significantly, suggesting a quadratic relationship.
+- Ascending Arrays: The number of comparisons is consistently minimal, specifically n - 1. This shows the algorithm performs well on sorted data.
+- Descending Arrays: The number of comparisons is similar to that of random arrays, indicating poor performance when data is reverse-sorted.
+
+Estimation for Array Size 25,000:
+To estimate how many comparisons the algorithm will make for an array of size 25,000, we can use the data we have for size 20,000, which is about 100,000,000 comparisons.
+We can use this formula to make our estimate:
+Estimated Comparisons for 25,000 = (25,000 / 20,000)² × 100,000,000
+= 156,250,000
+
+Conclusion:
+The analysis supports the hypothesis that the algorithm has O(n^2) behavior, especially with random or descending arrays, while it performs efficiently with sorted arrays.
